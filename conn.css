@@ -1,0 +1,832 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 1.5rem;
+    background-color: #000;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn, .btn-secondary {
+    text-decoration: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #fff;
+}
+
+.btn:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.image-section {
+    text-align: center;
+    margin-top: -1rem;
+}
+
+.image-section img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
+/* Hamburger Menu Button - Mobile Only */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 3px;
+}
+
+/* Mobile View Only */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the default links */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger menu */
+    }
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    color: #fff;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+.dropdown-menu.active {
+    display: flex; /* Show the dropdown */
+    opacity: 1; /* Make it visible */
+}
+
+/* Remove bullet points for dropdown menu */
+.dropdown-menu ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    list-style: none; /* Ensures no bullets for list items */
+}
+
+
+.dropdown-menu a {
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* White text */
+    font-size: 1.5rem; /* Large font size for mobile */
+    font-weight: bold;
+    text-align: left; /* Align text to the left */
+    display: block; /* Block-level for clickable area */
+    width: 100%; /* Takes full width */
+}
+
+.dropdown-menu a:hover {
+    color: #ccc; /* Subtle hover effect */
+}
+/* Dropdown Menu - Adjust positioning */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: fixed; /* Covers the entire screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
+    color: #fff;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: flex-start; /* Align menu items to the top */
+    align-items: flex-start; /* Align text to the left */
+    padding: 3rem 2rem; /* Add padding at the top and sides */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+/* Adjust menu item styles */
+.dropdown-menu ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.dropdown-menu li {
+    margin: 1.5rem 0; /* Add spacing between items */
+}
+
+.dropdown-menu a {
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* White text */
+    font-size: 1.5rem; /* Large text for mobile readability */
+    font-weight: bold;
+    text-align: left; /* Align text to the left */
+    display: block; /* Block-level for clickable area */
+    width: 100%;
+}
+
+.dropdown-menu a:hover {
+    color: #ccc; /* Subtle hover effect */
+}
+
+/* Ensure the first item aligns higher on the screen */
+.dropdown-menu.active {
+    display: flex; /* Make visible */
+    opacity: 1;
+}
+/* Hamburger Menu Button */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px; /* Increased height for better spacing */
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed; /* Fixed to top-right */
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001; /* Stays above all content */
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 30px; /* Full width for consistency */
+    background: #fff;
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animation */
+    position: relative; /* Enables precise positioning for the "X" */
+}
+
+/* Transform hamburger into "X" */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px); /* Rotate and shift first line */
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px); /* Rotate and shift last line */
+}
+
+/* Reset positions for non-active state */
+.hamburger span:nth-child(1),
+.hamburger span:nth-child(3) {
+    transform: none;
+}
+
+/* Mobile View Only */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Visible only on mobile */
+    }
+}
+/* About Section */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000; /* Dark background */
+    color: #fff; /* White text */
+    height: 100vh; /* Full viewport height */
+    padding: 2rem;
+}
+
+.about-section h1 {
+    font-size: 3rem; /* Large heading */
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.about-section p {
+    font-size: 1.2rem; /* Supporting text size */
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto; /* Center content */
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .about-section h1 {
+        font-size: 2rem; /* Smaller heading for mobile */
+    }
+
+    .about-section p {
+        font-size: 1rem; /* Smaller supporting text */
+    }
+}
+/* IT Club Schedule Section */
+.it-club-schedule {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.schedule-container {
+    display: flex;
+    flex-direction: row; /* Ensures image is on the left */
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+
+.schedule-image {
+    flex: 1;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.schedule-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.schedule-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.schedule-content h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.schedule-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .schedule-container {
+        flex-direction: column; /* Stack image and text */
+        text-align: center;
+    }
+
+    .schedule-image {
+        margin-bottom: 1.5rem;
+    }
+}
+@media (min-width: 1024px) {
+    .it-club-schedule {
+        padding: 5rem 2rem; /* Add more padding for a larger section */
+    }
+
+    .schedule-container {
+        max-width: 1400px; /* Expand the container width */
+        gap: 3rem; /* Increase spacing between image and text */
+    }
+
+    .schedule-image {
+        max-width: 600px; /* Increase the image size */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .schedule-content {
+        padding: 2rem; /* Add padding for text content */
+    }
+
+    .schedule-content h2 {
+        font-size: 2.5rem; /* Larger heading */
+    }
+
+    .schedule-content h3 {
+        font-size: 2rem; /* Larger subheading */
+    }
+
+    .schedule-content p {
+        font-size: 1.2rem; /* Slightly larger text */
+        line-height: 1.8; /* Increase line spacing */
+    }
+}
+/* Meet the Team Section */
+.meet-team {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 3rem 1rem;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: row; /* Arrange image and text side by side */
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.team-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team-content h2 {
+    font-size: 2.5rem; /* Large heading */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.team-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.team-button {
+    background-color: #e63946; /* Red button */
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(230, 57, 70, 0.4);
+    transition: background-color 0.3s ease;
+}
+
+.team-button:hover {
+    background-color: #a82f35; /* Darker red on hover */
+}
+
+.team-image {
+    flex: 1;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column; /* Stack image and text */
+        text-align: center;
+    }
+
+    .team-content h2 {
+        font-size: 2rem; /* Smaller heading for mobile */
+    }
+
+    .team-content p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    .team-image {
+        margin-top: 1.5rem;
+        max-width: 100%;
+    }
+}
+/* Officers and Sponsors Section */
+.officers-sponsors {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 2rem 1rem;
+}
+
+.officers, .sponsors {
+    margin-bottom: 2rem;
+}
+
+.officers h2, .sponsors h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.officers ul, .sponsors ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    text-align: center;
+}
+
+.officers ul li, .sponsors ul li {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .officers-sponsors {
+        text-align: center; /* Center-align all text for mobile */
+    }
+
+    .officers h2, .sponsors h2 {
+        font-size: 1.5rem; /* Slightly smaller headings for mobile */
+    }
+
+    .officers ul li, .sponsors ul li {
+        font-size: 1rem; /* Adjust font size for readability on smaller screens */
+    }
+}
+/* Team Banner Section */
+.team-image-section {
+    display: none; /* Hidden by default for mobile */
+    background-color: #000; /* Match the black background */
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.team-banner-image {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto;
+    border-radius: 8px; /* Add subtle rounding for a cleaner look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Add a shadow for emphasis */
+}
+
+/* Display image for PC version only */
+@media (min-width: 1024px) {
+    .team-image-section {
+        display: block; /* Show the section only on larger screens */
+    }
+}
+/* Divider Image Section */
+.divider-image-section {
+    display: flex; /* Ensure the image is displayed */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0; /* Add spacing around the image */
+    background-color: #000; /* Match the black background */
+}
+
+.divider-image {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add subtle rounding for a cleaner look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Subtle shadow effect */
+}
+
+/* Adjust image size for PC version */
+@media (min-width: 1024px) {
+    .divider-image {
+        max-width: 600px; /* Limit the image size on larger screens */
+    }
+}
+
+
+/* Display the image only on PC */
+@media (min-width: 1024px) {
+    .divider-image-section {
+        display: block; /* Show the section only for larger screens */
+    }
+}
+/* Developers Section */
+.developers {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem; /* Add spacing from the previous section */
+}
+
+.developers h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.developers ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.developers ul li {
+    font-size: 1.2rem; /* Text size for developers' names */
+    margin-bottom: 0.5rem;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .developers h2 {
+        font-size: 1.5rem; /* Smaller heading for mobile */
+    }
+
+    .developers ul li {
+        font-size: 1rem; /* Adjust name size for readability */
+    }
+}
+/* IT Club Event Section */
+.it-club-event {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 3rem 1rem;
+}
+
+.event-container {
+    display: flex;
+    flex-direction: row; /* Arrange text and image side by side */
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.event-details {
+    flex: 1;
+}
+
+.event-details h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.event-details h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.event-details p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.event-image {
+    flex: 1;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .event-container {
+        flex-direction: column; /* Stack image and text for mobile */
+        text-align: center;
+    }
+
+    .event-details h2 {
+        font-size: 2rem; /* Smaller heading for mobile */
+    }
+
+    .event-details h3 {
+        font-size: 1.2rem; /* Smaller subheading for mobile */
+    }
+
+    .event-details p {
+        font-size: 1rem; /* Adjust paragraph size for mobile */
+    }
+
+    .event-image {
+        margin-top: 1.5rem;
+    }
+}
+/* Event Section Styling */
+.it-club-event {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 3rem 1rem;
+}
+
+.event-container {
+    display: flex;
+    flex-direction: row; /* Arrange text and image side by side */
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.event-details {
+    flex: 1;
+}
+
+.event-details h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.event-details h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.event-details p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.modern-link {
+    color: #00b4d8; /* Light blue link color */
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #00b4d8; /* Underline effect */
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.modern-link:hover {
+    color: #48cae4; /* Lighter blue on hover */
+    border-bottom-color: #48cae4; /* Match underline color to hover color */
+}
+
+.event-image {
+    flex: 1;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .event-container {
+        flex-direction: column; /* Stack image and text for mobile */
+        text-align: center;
+    }
+
+    .event-details h2 {
+        font-size: 2rem; /* Smaller heading for mobile */
+    }
+
+    .event-details h3 {
+        font-size: 1.2rem; /* Smaller subheading for mobile */
+    }
+
+    .event-details p {
+        font-size: 1rem; /* Adjust paragraph size for mobile */
+    }
+
+    .event-image {
+        margin-top: 1.5rem;
+    }
+}
+.hero-buttons a {
+    pointer-events: none; /* Disables clicking on the buttons */
+    cursor: default; /* Changes the cursor to default */
+}
+.dropdown-menu ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.dropdown-menu ul li {
+    margin: 0.5rem 0; /* Spacing between menu items */
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: #fff; /* White text */
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.dropdown-menu ul li a:hover {
+    color: #00b4d8; /* Light blue on hover */
+}
+
+
+
+
+
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="conn.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Northwest IT Club</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </div>
+            
+        </nav>
+    </header>
+    
+
+    <!-- Add Meet Our Team Section Here -->
+    <section class="meet-team">
+        <div class="team-container">
+            <div class="team-content">
+                <h2>Meet Our Team</h2>
+                <p>
+                    Our team consists of passionate and driven individuals dedicated to fostering innovation,
+                    collaboration, and growth in the IT field. We connect, learn, and grow with every student
+                    who joins our community.
+                </p>
+    </section>
+
+    <section class="divider-image-section">
+        <img src="ITcontact.jpg" alt="IT Club Team" class="divider-image">
+    </section>
+    
+    
+    <section class="officers-sponsors">
+        <div class="officers">
+            <h2>Officers</h2>
+            <ul>
+                <li><strong>President:</strong> Anthony Leander (anthony.leander@my.tccd.edu)</li>
+                <li><strong>Vice President:</strong> Hannah Guthrie (hannah.guthrie@my.tccd.edu)</li>
+                <li><strong>Treasurer:</strong> Chandler Haney (chandler.haney@my.tccd.edu)</li>
+                <li><strong>Secretary:</strong> Mitchell Davis (mitchell.davis@my.tccd.edu)</li>
+            </ul>
+        </div>
+        <div class="sponsors">
+            <h2>Sponsors</h2>
+            <ul>
+                <li>Robert Harris (robert.harris429@tccd.edu)</li>
+                <li>Michael Nutt (michael.nutt@tccd.edu)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="developers">
+        <h2>Developers</h2>
+        <ul>
+            <li>Fullstack: Chandler Haney (chandler.haney@my.tccd.edu)</li>
+            <li>Fullstack: Kenneth Pascua (kenneth.pascua@my.tccd.edu)</li>
+        </ul>
+    </section>
+    
+    
+    
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+    
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            dropdownMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
+

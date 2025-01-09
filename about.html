@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="conn.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Northwest IT Club</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+        </nav>
+    </header>    
+
+    <!-- Main About Section -->
+    <main class="about-section">
+        <h1>Inspiring Innovation in Technology</h1>
+        <p>
+            Welcome to the Northwest IT Club! Join us as we tackle exciting projects, build valuable
+            connections, and shape the future of IT.
+        </p>
+
+        
+
+    </main>
+
+    <section class="it-club-schedule">
+        <div class="schedule-container">
+            <img src="IT club about img.jpg" alt="IT Club Activity" class="schedule-image">
+            <div class="schedule-content">
+                <h2>Join Us for Our Next Meeting</h2>
+                <h3>Wednesdays • 4:10 P.M. - 6:00 P.M.</h3>
+                <p><strong>In-Person:</strong> Our weekly meetings include engaging tech discussions, hands-on workshops, and networking opportunities. Join us in room NW-101.</p>
+                <p><strong>Online:</strong> Can’t make it in person? Join us virtually through our live stream link available in the member portal.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+    
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            dropdownMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
+
