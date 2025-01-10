@@ -146,27 +146,29 @@ body {
 
 /* Dropdown Menu */
 .dropdown-menu {
-    display: none; /* Hidden by default */
-    position: fixed;
+    visibility: hidden; /* Use visibility instead of display */
+    opacity: 0; /* Start fully transparent */
+    position: fixed; /* Covers the entire screen */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
     color: #fff;
-    z-index: 1000;
+    z-index: 1000; /* Ensure it stays above other content */
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
-    padding: 2rem;
-    opacity: 0;
-    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    padding: 3rem 2rem;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth fade-in effect */
 }
 
 .dropdown-menu.active {
-    display: flex; /* Show the dropdown */
-    opacity: 1; /* Make it visible */
+    visibility: visible; /* Make visible */
+    opacity: 1; /* Fully opaque */
 }
+
+
 
 /* Remove bullet points for dropdown menu */
 .dropdown-menu ul {
@@ -193,24 +195,8 @@ body {
 .dropdown-menu a:hover {
     color: #ccc; /* Subtle hover effect */
 }
-/* Dropdown Menu - Adjust positioning */
-.dropdown-menu {
-    display: none; /* Hidden by default */
-    position: fixed; /* Covers the entire screen */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
-    color: #fff;
-    z-index: 1000;
-    flex-direction: column;
-    justify-content: flex-start; /* Align menu items to the top */
-    align-items: flex-start; /* Align text to the left */
-    padding: 3rem 2rem; /* Add padding at the top and sides */
-    opacity: 0;
-    transition: opacity 0.3s ease; /* Smooth fade-in effect */
-}
+
+
 
 /* Adjust menu item styles */
 .dropdown-menu ul {
@@ -872,6 +858,9 @@ body {
     border-radius: 2px;
     opacity: 0.8;
     transition: opacity 0.3s ease;
+}
+.dropdown-menu {
+    z-index: 1000;
 }
 
 
