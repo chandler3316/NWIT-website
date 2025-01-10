@@ -823,6 +823,57 @@ body {
 .dropdown-menu ul li a:hover {
     color: #00b4d8; /* Light blue on hover */
 }
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation class for elements */
+.fade-in {
+    animation: fadeIn 1s ease-out forwards; /* Add 'forwards' to retain the final state */
+}
+
+/* Ensure elements are hidden before animation starts */
+.animate-on-load {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+/* Float Effect for Navigation Links */
+.nav-links a {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #f9fbfd; /* Adjust color for your theme */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    transform: translateY(-5px); /* Moves the link slightly upward */
+    color: #3498db; /* Change color on hover */
+}
+
+/* Optional: Add subtle shadow effect */
+.nav-links a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 3px;
+    background-color: #f1f5f9; /* Match the hover color */
+    border-radius: 2px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
 
 
 

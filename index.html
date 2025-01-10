@@ -9,8 +9,8 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">Northwest IT Club</div>
-            <ul class="nav-links">
+            <div class="logo animate-on-load">Northwest IT Club</div>
+            <ul class="nav-links animate-on-load">
                 <li><a href="about.html">About</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -27,32 +27,28 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-                      
-        
+        </nav>
     </header>
     <main>
         <section class="hero">
-            <div class="hero-content">
+            <div class="hero-content animate-on-load">
                 <h1>Pioneering Technology and Innovation</h1>
                 <p>
                     Join us in exploring the frontiers of technology. The Northwest IT Club is a hub for learners and innovators
                     passionate about advancing their skills in the tech world.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#" class="btn">Explore Our Website</a>
-                    <a href="#" class="btn-secondary">Join Us</a>
+                    <a href="#" class="btn animate-on-load">Explore Our Website</a>
+                    <a href="#" class="btn-secondary animate-on-load">Join Us</a>
                 </div>
-                
             </div>
         </section>
         <section class="image-section">
-            <img src="HappyHrITClub.jpg" alt="Colorful Illustration">
+            <img src="HappyHrITClub.jpg" alt="Colorful Illustration" class="animate-on-load">
         </section>
     </main>
     <script src="conn.js"></script>
-  
-    
-    
+
     <script>
         const hamburger = document.querySelector('.hamburger');
         const dropdownMenu = document.querySelector('.dropdown-menu');
@@ -62,10 +58,5 @@
             dropdownMenu.classList.toggle('active'); // Toggles dropdown visibility
         });
     </script>
-    
-    
-    
-    
-    
 </body>
 </html>
